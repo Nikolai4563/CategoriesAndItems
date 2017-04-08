@@ -1,0 +1,3 @@
+<input type="text"
+  (input) = "filterValue = $event.target.value">
+<p *ngFor="let category of categories | searchPipe:filterValue"><a class="btn btn-secondary" routerLink="/categories/{{category.url}}"  role="button">{{category.name}}</a></p>

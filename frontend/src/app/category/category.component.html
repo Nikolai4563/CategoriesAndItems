@@ -1,0 +1,7 @@
+<categories-menu></categories-menu>
+<h1>{{category?.name}} page</h1>
+<div *ngFor ="let item of category?.items | paginate: { itemsPerPage: 5, currentPage: p }">
+  <a routerLink="/items/{{item.alias}}">{{item.name}}</a>
+</div>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

@@ -1,0 +1,2 @@
+ng install
+ng serve

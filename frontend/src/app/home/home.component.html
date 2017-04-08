@@ -1,0 +1,7 @@
+<categories-menu></categories-menu>
+<ul>
+  <li *ngFor ="let item of items | paginate: { itemsPerPage: 5, currentPage: p }" >
+    <a routerLink="/items/{{item.alias}}" [routerLinkActive]="['is-active']">{{item.name}}</a>
+  </li>
+</ul>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
